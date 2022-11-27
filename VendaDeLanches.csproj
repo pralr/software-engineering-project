@@ -7,13 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\Admin\Views\AdminLanche\**" />
-    <Content Remove="Areas\Admin\Views\AdminLanche\**" />
-    <EmbeddedResource Remove="Areas\Admin\Views\AdminLanche\**" />
-    <None Remove="Areas\Admin\Views\AdminLanche\**" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Compile Remove="AdminPedidoController.cs" />
+    <Compile Remove="Areas\Admin\AdminLancheController.cs" />
     <Compile Remove="Controllers\AdminController.cs" />
   </ItemGroup>
 
@@ -32,12 +27,6 @@
     <PackageReference Include="xunit.extensibility.core" Version="2.4.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="Areas\Admin\Views\AdminLanche\Create.cshtml" />
-    <None Include="Areas\Admin\Views\AdminLanche\Delete.cshtml" />
-    <None Include="Areas\Admin\Views\AdminLanche\Details.cshtml" />
-    <None Include="Areas\Admin\Views\AdminLanche\Edit.cshtml" />
-    <None Include="Areas\Admin\Views\AdminLanche\Index.cshtml" />
-  </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

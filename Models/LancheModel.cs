@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VendaDeLanches.Models
 {
-    [Table("Lanches")]
     public class LancheModel
     {
         [Key]
