@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
+using VendaDeLanches.Areas.Admin.Services;
 using VendaDeLanches.Context;
 using VendaDeLanches.Models;
 using VendaDeLanches.Repositories;
@@ -18,12 +20,24 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddPaging(options =>
+{
+    options.ViewName = "Bootstrap4";
+    options.PageParameterName = "pageindex";
+
+});
+
 builder.Services.AddTransient<ILancheRepository, LancheRepository>();
 builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 builder.Services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
+builder.Services.AddScoped<RelatorioVendasService>(); 
+// to registrando como serviço uma classe (geralmente nao se faz)
+// posso usar o serviço do relatorio e injeta-lo no construtor do controlador 
+
+
 // addscoped - se 2 clientes solicitarem o obj carrinho ao mesmo tempo vao obter instancias diferentes, pq sao instancias diferentes
 // entao usam requests diferentes
 
