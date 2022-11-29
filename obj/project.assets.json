@@ -10555,19 +10555,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\prisc\\.nuget\\packages\\": {}
+    "C:\\Users\\willa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prisc\\source\\repos\\VendaDeLanches\\VendaDeLanches\\VendaDeLanches.csproj",
+      "projectUniqueName": "C:\\will\\projetos\\software-engineering-project\\VendaDeLanches.csproj",
       "projectName": "VendaDeLanches",
-      "projectPath": "C:\\Users\\prisc\\source\\repos\\VendaDeLanches\\VendaDeLanches\\VendaDeLanches.csproj",
-      "packagesPath": "C:\\Users\\prisc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prisc\\source\\repos\\VendaDeLanches\\VendaDeLanches\\obj\\",
+      "projectPath": "C:\\will\\projetos\\software-engineering-project\\VendaDeLanches.csproj",
+      "packagesPath": "C:\\Users\\willa\\.nuget\\packages\\",
+      "outputPath": "C:\\will\\projetos\\software-engineering-project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\prisc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\willa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10575,8 +10575,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://tdbaplicativos.pkgs.visualstudio.com/_packaging/Toledo-do-Brasil-Packages/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -10646,7 +10645,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
