@@ -40,18 +40,18 @@
     }
 }
 
+.fadeIn {
+    -webkit-animation: fadeIn 1.5s ease-in-out;
+    -moz-animation: fadeIn 1.5s ease-in-out;
+    -o-animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
 .fadeInHeader {
     -webkit-animation: fadeIn 1.5s ease-in-out;
     -moz-animation: fadeIn 1.5s ease-in-out;
     -o-animation: fadeIn 1.5s ease-in-out;
     animation: fadeIn 1s ease-in-out;
-}
-
-.fadeInPosHeader {
-    -webkit-animation: fadeIn 1.5s ease-in-out;
-    -moz-animation: fadeIn 1.5s ease-in-out;
-    -o-animation: fadeIn 1.5s ease-in-out;
-    animation: fadeIn 2s ease-in-out;
 }
 
 html {
@@ -70,7 +70,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background: linear-gradient(to right, #ff981a, #ff981a, #ff6600, #ff6600);
+    margin-bottom: 60px;
 }
 
 .image {
@@ -85,22 +86,228 @@ h5 {
     font-size: 20px;
 }
 
-h5, p {
+h5, p, h2 {
     font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif;
     color: #ffffb9;
 }
 
 #header {
-    width: 950px;
+    width: 100%;
     height: 400px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid red;
 }
 
-#header img {
+#header2 {
+    width: 950px;
+    height: 400px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formato-imagem,
+.formato-imagem-header{
     width: 100%;
     height: 100%;
     border-radius: 10px 10px;
     border: 3px solid #898477;
+}
+
+.formato-imagem-header {
+    width: 1200px;
+}
+
+.dropdown-item {/*botao de categoria*/
+    color: white !important;
+}
+
+.navbar:hover .nav-link {
+    background: none !important;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.nav-link:hover,
+.dropdown-item:hover,
+.navbar li:hover,
+.navbar .btn-admin:hover {
+    transition: all 0.5s;
+    color: black !important;
+    background-color: white !important;
+    border-radius: 10px !important;
+}
+/*privacy*/
+/*body {
+    background-color: #272b30 !important;
+}*/
+.card {
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border: none;
+}
+
+#main-privacy ul {
+    list-style-position: inside;
+    list-style-image: url(seta.png);
+}
+
+#main-privacy li {
+    line-height: 40px;
+}
+
+#logo {
+    width: 150px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.form-control#barra-pesquisa {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 400px;
+    height: 40px;
+}
+/*privacy*/
+/*tela de login*/
+#body-login {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin: 0px;
+}
+
+#login {
+    width: 400px;
+    height: 240px;
+    background-color: rgba(255, 255, 255, 0.2);
+    float: right;
+    position: relative;
+    top: 120px;
+    text-align: center;
+    border-radius: 10px 10px;
+}
+
+#login img {
+    margin-top: -60px;
+    margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
+}
+
+#login input {
+    height: 30px;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px 10px;
+    padding-left: 40px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    color: black;
+}
+
+input#email {
+    background-image: url(~/images/icone-usuario.png);
+}
+
+input#senha {
+    background-image: url(~/images/icone-cadeado.png);
+}
+
+input#submit {
+    color: black;
+    background-color: #ff981a;
+    padding: 5px 20px;
+    height: 45px;
+    width: 90%;
+    cursor: pointer;
+}
+
+input#submit:hover {
+    transition: all 0.5s;
+    background-color: #ff6600;
+}
+
+#welcome {
+    float: left;
+    position: relative;
+    left: 20px;
+    color: white;
+    width: 400px;
+    height: 550px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px white solid;
+}
+
+#welcome img {
+    width: 700px;
+    height: 1000px;
+}
+
+#logo-footer {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: -50px;
+    right: 50px;
+}
+
+/*contato*/
+#exampleInputEmail1,
+#formFile,
+#exampleTextarea {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#exampleTextarea {
+    height: 100px;
+}
+.display-4 {
+    color: white;
+}
+#form-contato {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: white;
+}
+/*carrinho de compra*/
+#carrinho-compra,
+#count {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 10px;
+    margin: 5px;
+    color: white;
+}
+/*admin*/
+#logout {
+    position: relative;
+    top: 2px;
+    line-height: 50px;
+    color: white;
+}
+#nav-admin {
+    position: absolute;
+    right: 20px;
+}
+/*lanches*/
+#nome-lanche:hover {
+    color: black !important;
 }

@@ -1,17 +1,30 @@
-﻿<div class="container">
-    <div class="jumbotron">
-        <h3>Queremos ouvir o que você tem a dizer!</h3>
-        <p>Se você tem alguma dúvida, fale conosco.</p>
+﻿@{
+    ViewData["Title"] = "Contato";
+}
 
-        <p>
-            <i class="bi bi-envelope-at-fill"></i>
-            <h5><email endereco="priscylla@yahoo.com" conteudo="Enviar um e-mail"></email></h5>
-            <br/>
-            <span>
-                <i class="bi bi-telephone-forward"></i>
-            </span>
-            <h5>(11) 9999-999</h5>
-            <br/>
-        </p>
-    </div>
+<div class="text-center fadeIn">
+    <br/><br/>
+    <h1 class="display-4">Dúvidas? Fale conosco!</h1>
+    <br/>
+    <form>
+        <fieldset id="form-contato">
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="form-label mt-4">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite um email para que possamos entrar em contato!">
+            </div>
+            <div class="form-group">
+                <label for="exampleTextarea" class="form-label mt-4">Mensagem</label>
+                <textarea class="form-control" id="exampleTextarea" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="formFile" class="form-label mt-4">Anexo</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <br/><br/>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </fieldset>
+    </form>
+
+
+
 </div>

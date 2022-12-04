@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace VendaDeLanches.Migrations
 {
-    public partial class primeiramigracao : Migration
+    public partial class segundamigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

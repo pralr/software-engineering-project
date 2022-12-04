@@ -12,8 +12,8 @@ using VendaDeLanches.Context;
 namespace VendaDeLanches.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221128163652_primeiramigracao")]
-    partial class primeiramigracao
+    [Migration("20221203033213_segundamigration")]
+    partial class segundamigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -10,6 +10,7 @@
     <Compile Remove="AdminPedidoController.cs" />
     <Compile Remove="Areas\Admin\AdminLancheController.cs" />
     <Compile Remove="Controllers\AdminController.cs" />
+    <Compile Remove="Views\Home\Class.cs" />
   </ItemGroup>
 
   <ItemGroup>

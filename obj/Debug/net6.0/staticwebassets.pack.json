@@ -25,12 +25,20 @@
       "PackagePath": "staticwebassets\\images\\3.jpg"
     },
     {
+      "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\burguer.png",
+      "PackagePath": "staticwebassets\\images\\burguer.png"
+    },
+    {
       "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\carrinho-icon.jpg",
       "PackagePath": "staticwebassets\\images\\carrinho-icon.jpg"
     },
     {
       "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\excluir-icon.jpg",
       "PackagePath": "staticwebassets\\images\\excluir-icon.jpg"
+    },
+    {
+      "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\fundo.jpg",
+      "PackagePath": "staticwebassets\\images\\fundo.jpg"
     },
     {
       "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\header.jpeg",
@@ -41,8 +49,32 @@
       "PackagePath": "staticwebassets\\images\\header2.jpeg"
     },
     {
+      "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\icone-cadeado.png",
+      "PackagePath": "staticwebassets\\images\\icone-cadeado.png"
+    },
+    {
+      "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\icone-usuario.png",
+      "PackagePath": "staticwebassets\\images\\icone-usuario.png"
+    },
+    {
+      "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\logo-black.png",
+      "PackagePath": "staticwebassets\\images\\logo-black.png"
+    },
+    {
+      "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\logo-white.png",
+      "PackagePath": "staticwebassets\\images\\logo-white.png"
+    },
+    {
+      "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\logo-white1.png",
+      "PackagePath": "staticwebassets\\images\\logo-white1.png"
+    },
+    {
       "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\pre-footer.jpeg",
       "PackagePath": "staticwebassets\\images\\pre-footer.jpeg"
+    },
+    {
+      "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\images\\user.png",
+      "PackagePath": "staticwebassets\\images\\user.png"
     },
     {
       "Id": "C:\\will\\projetos\\software-engineering-project\\wwwroot\\js\\site.js",
