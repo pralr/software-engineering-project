@@ -229,11 +229,10 @@ namespace VendaDeLanches.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("CarrinhoCompraId")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("LancheId")
+                    b.Property<int?>("LancheId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantidade")
@@ -294,12 +293,10 @@ namespace VendaDeLanches.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ImagemThumbnailUrl")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("ImagemUrl")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -474,9 +471,7 @@ namespace VendaDeLanches.Migrations
                 {
                     b.HasOne("VendaDeLanches.Models.LancheModel", "Lanche")
                         .WithMany()
-                        .HasForeignKey("LancheId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("LancheId");
 
                     b.Navigation("Lanche");
                 });

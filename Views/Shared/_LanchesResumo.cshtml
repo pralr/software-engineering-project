@@ -1,16 +1,13 @@
 ﻿@model LancheModel
 
-<div class="col-sm-4 col-md-4 col-lg-4">
-    <p><img src="@Model.ImagemUrl" class="img-fluid" /></p>
-    <h3>Preço: @Model.Preco.ToString("c")</h3>
-
-
+<div class="col-sm-4 col-md-4 col-lg-4 fadeIn">
+    <p><img src="@Model.ImagemUrl" class="img-fluid formato-imagem" /></p>
+    <h3 style="color:white;">Preço: @Model.Preco.ToString("c")</h3>
     <h4>
-    
-    <a asp-controller="Lanche" asp-action="Details" asp-route-Id="@Model.Id">@Model.Nome</a>
+        <a id="nome-lanche" style="text-decoration:none;" asp-controller="Lanche" asp-action="Details" asp-route-Id="@Model.Id">@Model.Nome</a>
     </h4>
 
-    <p>@Model.DescricaoCurta</p>
+    <p style="color:white">@Model.DescricaoCurta</p>
 
     <div>
         <p class="button">
