@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - VendaDeLanches</title>
+    <title>@ViewData["Title"] - The Burguer House</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-slate.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/VendaDeLanches.styles.css" asp-append-version="true" />
@@ -12,13 +12,15 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VendaDeLanches</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img id="logo" src="~/images/logo-white1.png" alt="">
+                  </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1" id="main">
                         @await Component.InvokeAsync("CarrinhoCompraResumo")
                         @await Component.InvokeAsync("CategoriaMenu")
                         <li class="nav-item">
@@ -31,7 +33,7 @@
 
                             <form class="navbar-form navbar-righht" asp-controller="Lanche" asp-action="Search" method="get">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Procurar produto" name="searchString" 
+                                <input type="text" id="barra-pesquisa" class="form-control" placeholder="Procurar produto" name="searchString" 
                                 value="@ViewData["searchString"]">
                             </div>
                             </form>
@@ -40,17 +42,16 @@
                         @await Html.PartialAsync("_LoginPartial")
                         @if(User.IsInRole("Admin")) {
                             <!-- só aparece pro usuario que tá com perfil do admin -->
-                            <a class="nav-link text-ligh" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
+                            <a class="btn-admin nav-link text-ligh" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
                         }
-                        <li>
-
-                        </li>
-
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <!--<div id="header" class="fadeInHeader">
+            <img class="formato-imagem-header" src="~/images/header.jpeg" alt="...">
+        </div>-->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -58,8 +59,8 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - VendaDeLanches - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container" style="color: white">
+            &copy; 2022 - VendaDeLanches - <a asp-area="" asp-controller="Home" asp-action="Privacidade">Privacidade</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
