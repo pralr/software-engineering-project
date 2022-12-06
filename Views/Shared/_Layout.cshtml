@@ -31,14 +31,18 @@
                         </li>
                         <li>
 
-                            <form class="navbar-form navbar-righht" asp-controller="Lanche" asp-action="Search" method="get">
+                         <form class="navbar-form navbar-righht" asp-controller="Lanche" asp-action="Search" method="get">
                             <div class="form-group">
-                                <input type="text" id="barra-pesquisa" class="form-control" placeholder="Procurar produto" name="searchString" 
+                                <input type="text" id="barra-pesquisa" class="form-control" placeholder="Procurar lanche" name="searchString" 
                                 value="@ViewData["searchString"]">
                             </div>
                             </form>
                             
                         </li>
+
+                      
+               
+                       
                         @await Html.PartialAsync("_LoginPartial")
                         @if(User.IsInRole("Admin")) {
                             <!-- só aparece pro usuario que tá com perfil do admin -->

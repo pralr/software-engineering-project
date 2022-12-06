@@ -14,6 +14,14 @@
     </div>
 }
 
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
 <br/><br /><br/>
 <<table class="table">
     <tr>

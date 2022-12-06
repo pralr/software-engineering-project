@@ -14,14 +14,6 @@
     </div>
 }
 
-@if (TempData["MensagemSucesso"] != null)
-{
-    <div class="alert alert-dismissible alert-success">
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        @TempData["MensagemSucesso"]
-    </div>
-}
-
 <div class="text-center fadeIn">
     <br /><br />
     <h1 class="display-4">Cadastro</h1>
@@ -43,36 +35,6 @@
                         <input type="password" asp-for="Password" class="form-control">
                         @Html.ValidationMessageFor(x => x.Password)
                     </div>
-                    <!-- <div class="col-md-12">
-                        <label for="inputEmail" class="form-label">Email</label>
-                        <input type="email" asp-for="Email" class="form-control" id="inputEmail">
-                        //Html.ValidationMessageFor(x => x.Email)
-                    </div>
-
-                     <div class="col-md-8">
-                        <label for="inputEndereco" class="form-label">Endereço</label>
-                        <input type="text" asp-for="Endereco" class="form-control" id="inputEndereco">
-                        //Html.ValidationMessageFor(x => x.Endereco)
-                    </div>
-
-                    <div class="col-md-4">
-                        <label for="inputComplemento" class="form-label">Complemento</label>
-                        <input type="text" asp-for="Complemento" class="form-control" id="inputComplemento">
-                        //Html.ValidationMessageFor(x => x.Complemento)
-                    </div>
-
-                    <div class="col-md-6">
-                        <label for="inputCidade" class="form-label">Cidade</label>
-                        <input type="text" asp-for="Cidade" class="form-control" id="inputCidade">
-                        //Html.ValidationMessageFor(x => x.Cidade)
-                    </div>
-
-                    <div class="col-md-6">
-                        <label for="inputEstado" class="form-label">Estado</label>
-                        <input type="text" asp-for="Estado" class="form-control" id="inputEstado">
-                        //Html.ValidationMessageFor(x => x.Endereco)
-                    </div>
-                    -->
 
                     <br /><br /><br /><br/>
                     <div class="col-12">
@@ -83,5 +45,5 @@
             <br />
         </div>
     </div>
-
+    <img id="logo-footer" class="fadeIn" src="~/images/logo-black.png" alt="">
 </div>

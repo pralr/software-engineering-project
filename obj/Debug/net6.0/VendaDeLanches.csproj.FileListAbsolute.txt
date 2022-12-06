@@ -1127,3 +1127,7 @@ C:\will\projetos\software-engineering-project\obj\Debug\net6.0\refint\VendaDeLan
 C:\will\projetos\software-engineering-project\obj\Debug\net6.0\VendaDeLanches.pdb
 C:\will\projetos\software-engineering-project\obj\Debug\net6.0\VendaDeLanches.genruntimeconfig.cache
 C:\will\projetos\software-engineering-project\obj\Debug\net6.0\ref\VendaDeLanches.dll
+C:\Users\prisc\source\repos\VendaDeLanches\VendaDeLanches\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\prisc\source\repos\VendaDeLanches\VendaDeLanches\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\prisc\source\repos\VendaDeLanches\VendaDeLanches\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Core.dll
+C:\Users\prisc\source\repos\VendaDeLanches\VendaDeLanches\bin\Debug\net6.0\refs\Microsoft.Extensions.Identity.Stores.dll

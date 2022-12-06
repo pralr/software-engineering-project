@@ -27,9 +27,13 @@ namespace VendaDeLanches.Controllers
             if(ModelState.IsValid)
             {
                 _contatoRepository.EnviarMensagem(contato);
-                ViewData["MensagemSucesso"] = "Mensagem enviada com sucesso! Em breve entraremos em contato.";
             }
 
+            return View("~/Views/Contato/MensagemEnviada.cshtml");
+        }
+
+        public IActionResult MensagemEnviada()
+        {
             return View();
         }
     }

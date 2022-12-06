@@ -4,14 +4,6 @@
     ViewData["Title"] = "Contato";
 }
 
-@if (TempData["MensagemSucesso"] != null)
-{
-    <div class="alert alert-dismissible alert-success">
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        @TempData["MensagemSucesso"]
-    </div>
-}
-
 <div class="text-center fadeIn">
     <br/><br/>
     <h1 class="display-4">Dúvidas? Fale conosco!</h1>
@@ -24,7 +16,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleTextarea" class="form-label mt-4">Mensagem</label>
-                <input asp-for="Mensagem" textarea class="form-control" id="exampleTextarea" rows="2"></inputtextarea>
+                <input asp-for="Mensagem" textarea class="form-control" id="exampleTextarea" rows="2">
             </div>
             <br/><br/>
             <button type="submit" class="btn btn-primary">Enviar</button>

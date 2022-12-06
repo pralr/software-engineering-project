@@ -87,11 +87,13 @@ namespace VendaDeLanches.Controllers
                     // o usuario ja existe
                     // a senha nao segue os padroes 
 
-                    TempData["MensagemErro"] = "Este nome de usuário já é utilizado. Por favor, escolha outro!";
+                    TempData["MensagemErro"] = "Ocorreu um erro com seu cadastro. " +
+                        "Por favor, confira se a senha segue os padrões (mínimo 8 caracteres, uma letra maiúscula. " +
+                        "Caso não o erro persista, escolha outro login.";
                   //  this.ModelState.AddModelError("Registro", "Login já é utilizado, por favor, utilize outro.");
                 }
 
-
+    
             } 
             return View(registroVM);
         }
