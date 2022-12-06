@@ -4,25 +4,29 @@
 
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lanches";
 }
 
+<br />
 <h1>Lanches</h1>
+<br />
 
 <form method="get" class="form-inline">
-    <input name="filter" class="form-control" placeholder="filtro"
+    <input name="filter" class="form-control" placeholder="Digite seu lanche..."
     value="@Model.RouteValue["Filter"]"/>
-
-    <button typpe="submit" class="btn btn-info">Procurar</button>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Procurar</button>
+    </div>
 </form>
-
+<br />
 Total de produtos: @Model.TotalRecordCount
 <div>
     <vc:pager paging-list="@Model"></vc:pager>
 </div>
 
+<br />
 <p>
-    <a asp-action="Create">Criar lanche</a>
+    <a asp-action="Create">Criar um novo lanche</a>
 </p>
 <table class="table">
     <thead>
@@ -76,9 +80,9 @@ Total de produtos: @Model.TotalRecordCount
                 @Html.DisplayFor(modelItem => item.Categoria.Descricao)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
             </td>
         </tr>
 }

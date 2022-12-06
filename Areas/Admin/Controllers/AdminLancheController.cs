@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +14,7 @@ using VendaDeLanches.Models;
 namespace VendaDeLanches.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class AdminLancheController : Controller
     {
         private readonly AppDbContext _context;
@@ -68,7 +71,7 @@ namespace VendaDeLanches.Areas.Admin.Controllers
         // GET: Admin/AdminLanche/Create
         public IActionResult Create()
         {
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Descricao");
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Nome");
             return View();
         }
 
@@ -85,7 +88,7 @@ namespace VendaDeLanches.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Descricao", lancheModel.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Nome", lancheModel.CategoriaId);
             return View(lancheModel);
         }
 
@@ -102,7 +105,7 @@ namespace VendaDeLanches.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Descricao", lancheModel.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Nome", lancheModel.CategoriaId);
             return View(lancheModel);
         }
 
@@ -138,7 +141,7 @@ namespace VendaDeLanches.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Descricao", lancheModel.CategoriaId);
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Nome", lancheModel.CategoriaId);
             return View(lancheModel);
         }
 

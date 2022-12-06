@@ -35,6 +35,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Areas/Admin/Views/AdminContato/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Db250YXRvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Areas/Admin/Views/AdminContato/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Db250YXRvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Areas/Admin/Views/AdminContato/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Db250YXRvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Areas/Admin/Views/AdminLanche/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYW5jaGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -81,14 +93,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Areas/Admin/Views/AdminPedido/PedidoNotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5QZWRpZG9cUGVkaWRvTm90Rm91bmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Areas/Admin/Views/AdminRelatorioVendas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5SZWxhdG9yaW9WZW5kYXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Areas/Admin/Views/AdminRelatorioVendas/RelatorioVendasSimples.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5SZWxhdG9yaW9WZW5kYXNcUmVsYXRvcmlvVmVuZGFzU2ltcGxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Areas/Admin/Views/Admin/Index.cshtml]
@@ -149,10 +153,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Views/Pedido/CheckoutCompleto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENoZWNrb3V0Q29tcGxldG8uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Views/Pedido/Teste.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXFRlc3RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/prisc/source/repos/VendaDeLanches/VendaDeLanches/Views/Shared/Components/CarrinhoCompraResumo/Default.cshtml]

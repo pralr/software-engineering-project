@@ -268,6 +268,28 @@ namespace VendaDeLanches.Migrations
                     b.ToTable("Categorias");
                 });
 
+            modelBuilder.Entity("VendaDeLanches.Models.ContatoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("DataEnvioDaMensagem")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmailParaContato")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mensagem")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Mensagens");
+                });
+
             modelBuilder.Entity("VendaDeLanches.Models.LancheModel", b =>
                 {
                     b.Property<int>("Id")

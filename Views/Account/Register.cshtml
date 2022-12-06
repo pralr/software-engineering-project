@@ -4,6 +4,24 @@
     ViewData["Title"] = "Cadastro";
 }
 
+<br />
+<br />
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
 <div class="text-center fadeIn">
     <br /><br />
     <h1 class="display-4">Cadastro</h1>
@@ -13,49 +31,48 @@
         <div class="card-header"></div>
         <div class="card-body">
             <p class="card-text">
-                <form asp-controller="Usuario" asp-action="Criar" method="post" class="row g-3">
+                <form asp-controller="Account" asp-action="Register" method="post" class="row g-3">
                     <div class="col-6">
-                        <label for="inputLogin" class="form-label">Login</label>
-                        <input type="text" asp-for="UserName" class="form-control" id="inputLogin">
-                        @Html.ValidationMessageFor(x => x.UserName)
+                        <label asp-for="UserName" class="form-label"></label>
+                        <input asp-for="UserName" class="form-control">
+                         @Html.ValidationMessageFor(x => x.UserName)
+
                     </div>
                     <div class="col-6">
-                        <label for="inputNome" class="form-label">Nome</label>
-                        <input type="text" asp-for="UserName" class="form-control" id="inputNome">
-                        @Html.ValidationMessageFor(x => x.UserName)
+                        <label for="inputPassword" class="form-label">Senha</label>
+                        <input type="password" asp-for="Password" class="form-control">
+                        @Html.ValidationMessageFor(x => x.Password)
                     </div>
-                    <!--<div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email</label>
-                        <input type="email" asp-for="Email" class="form-control" id="inputEmail4">
-                        
+                    <!-- <div class="col-md-12">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" asp-for="Email" class="form-control" id="inputEmail">
+                        //Html.ValidationMessageFor(x => x.Email)
                     </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Senha</label>
-                        <input type="password" asp-for="Senha" class="form-control" id="inputPassword4">
-                        
+
+                     <div class="col-md-8">
+                        <label for="inputEndereco" class="form-label">Endereço</label>
+                        <input type="text" asp-for="Endereco" class="form-control" id="inputEndereco">
+                        //Html.ValidationMessageFor(x => x.Endereco)
                     </div>
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Endereço</label>
-                        <input type="text" asp-for="Endereco" class="form-control" id="inputAddress">
-                        
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Cidade</label>
-                        <input type="text" asp-for="Cidade" class="form-control" id="inputCity">
-                        
-                    </div>
+
                     <div class="col-md-4">
-                        <label for="inputState" class="form-label">Estado</label>
-                        <select id="inputState" class="form-select">
-                            <option selected>Escolha...</option>
-                            <option>...</option>
-                        </select>
+                        <label for="inputComplemento" class="form-label">Complemento</label>
+                        <input type="text" asp-for="Complemento" class="form-control" id="inputComplemento">
+                        //Html.ValidationMessageFor(x => x.Complemento)
                     </div>
-                    <div class="col-md-2">
-                        <label for="inputNumber" class="form-label">Número de contato</label>
-                        <input type="text" asp-for="Numero" class="form-control" id="inputNumber">
-                        
-                    </div>-->
+
+                    <div class="col-md-6">
+                        <label for="inputCidade" class="form-label">Cidade</label>
+                        <input type="text" asp-for="Cidade" class="form-control" id="inputCidade">
+                        //Html.ValidationMessageFor(x => x.Cidade)
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputEstado" class="form-label">Estado</label>
+                        <input type="text" asp-for="Estado" class="form-control" id="inputEstado">
+                        //Html.ValidationMessageFor(x => x.Endereco)
+                    </div>
+                    -->
 
                     <br /><br /><br /><br/>
                     <div class="col-12">

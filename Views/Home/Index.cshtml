@@ -1,22 +1,21 @@
 ﻿@model HomeViewModel
 
 <div id="header" class="fadeInHeader">
-    <img class="formato-imagem-header" src="~/images/header.jpeg" alt="...">
-</div>
+    <img class="formato-imagem-header" src="~/images/header.jpg" alt="...">
+</div><br/><br/>
 
-<h2 class="fadeIn">Os preferidos da semana</h2>
-
+<h2 class="fadeIn" style="color:white">Os preferidos da semana</h2>
+<br/>
 <div class="row">
     @foreach (var lanche in Model.LanchesPreferidos)
     {
             <partial name="_LanchesResumo" for="@lanche" />
     }
 </div>
+<br/><br/>
 
-<div class="text-center">
-    <partial name="_Carousel"/>
-</div>
 
 <div id="header2" class="fadeIn">
-    <img class="formato-imagem" src="~/images/pre-footer.jpeg" alt="...">
+    <img class="formato-imagem-header" src="~/images/pre-footer.jpg" alt="...">
 </div>
+<br/><br/><br/>

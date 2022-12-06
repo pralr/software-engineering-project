@@ -59,12 +59,12 @@ namespace VendaDeLanches.Models
         [Display(Name = "Itens do Pedido")]
         public int TotalItensPedido { get; set; }
 
-        [Display(Name = "Data do Pedido")]
+        [Display(Name = "Data de Envio")]
         [DataType(DataType.Text)]
         [DisplayFormat(DataFormatString = "{0: dd/MM/yyy hh:mm}", ApplyFormatInEditMode = true)]
         public DateTime PedidoEnviado { get; set; }
 
-        [Display(Name = "Data do Pedido")]
+        [Display(Name = "Data de Entrega")]
         [DataType(DataType.Text)]
         [DisplayFormat(DataFormatString = "{0: dd/MM/yyy hh:mm}", ApplyFormatInEditMode =  true)]
         public DateTime? PedidoEntregueEm { get; set; }

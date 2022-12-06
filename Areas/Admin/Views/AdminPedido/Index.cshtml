@@ -6,24 +6,33 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Pedidos</h1>
+<br/>
+
+<div class="alert alert-secondary" role="alert">
+    <p class="mb-0" style="color:black">
+        Preferencialmente, esta tela é apenas para visualizar os detalhes dos pedidos. Visto que todas as informações abaixo foram dadas pelo cliente,
+        só devem ser alteradas e/ou excluídas pelo pedido dos mesmos ou por motivos de força maior. Para mais dúvidas, por favor, contate seu gerente. 
+    </p>
+</div>
+
+<br/>
+
+<h1>Pedidos</h1><br/>
 
 <form method="get" class="form-inline">
     <input name="filter" class="form-control" placeholder="filtro"
     value="@Model.RouteValue["Filter"]"/>
-    <button type="submit" class="btn btn-info">
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>Procurar
-    </button>
+    <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Procurar</button>
+    </div>
 </form>
-
+<br/>
 Total de Pedidos: @Model.TotalRecordCount
+<br/>
 <div>
     <vc:pager paging-list="@Model"></vc:pager>
 </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -100,9 +109,9 @@ Total de Pedidos: @Model.TotalRecordCount
                 @Html.DisplayFor(modelItem => item.PedidoEntregueEm)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a> |
                 <a asp-action="PedidoLanches" asp-route-id="@item.Id">Ver itens</a>
             </td>
         </tr>

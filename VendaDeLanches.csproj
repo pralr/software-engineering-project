@@ -7,10 +7,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Admin\Views\AdminGrafico\**" />
+    <Compile Remove="Areas\Admin\Views\AdminRelatorioVendas\**" />
+    <Content Remove="Areas\Admin\Views\AdminGrafico\**" />
+    <Content Remove="Areas\Admin\Views\AdminRelatorioVendas\**" />
+    <EmbeddedResource Remove="Areas\Admin\Views\AdminGrafico\**" />
+    <EmbeddedResource Remove="Areas\Admin\Views\AdminRelatorioVendas\**" />
+    <None Remove="Areas\Admin\Views\AdminGrafico\**" />
+    <None Remove="Areas\Admin\Views\AdminRelatorioVendas\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="AdminPedidoController.cs" />
     <Compile Remove="Areas\Admin\AdminLancheController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\AdminGraficoController.cs" />
+    <Compile Remove="Areas\Admin\Controllers\AdminRelatorioVendasController.cs" />
     <Compile Remove="Controllers\AdminController.cs" />
+    <Compile Remove="Models\LancheGrafico.cs" />
     <Compile Remove="Views\Home\Class.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Admin\Views\AdminContato\Create.cshtml" />
+    <Content Remove="Areas\Admin\Views\AdminContato\Edit.cshtml" />
+    <Content Remove="Views\Pedido\Teste.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

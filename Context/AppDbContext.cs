@@ -15,5 +15,7 @@ namespace VendaDeLanches.Context
 
         public DbSet<PedidoModel> Pedidos { get; set; }
         public DbSet<PedidoDetalheModel> PedidoDetalhes { get; set; }
+
+        public DbSet<ContatoModel> Mensagens { get; set; }
     }
 }

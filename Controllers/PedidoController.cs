@@ -89,10 +89,6 @@ namespace VendaDeLanches.Controllers
             return View(pedido);
         }
 
-        public IActionResult Teste()
-        {
-            return View();
-        }
 
     }
 }

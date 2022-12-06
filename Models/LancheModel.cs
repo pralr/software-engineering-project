@@ -19,25 +19,25 @@ namespace VendaDeLanches.Models
         public string DescricaoCurta { get; set; }
         [Required(ErrorMessage = "Informe a descrição do lanche.")]
         [Display(Name = "Descrição detalhada do lanche")]
-        [MinLength(50, ErrorMessage = "Descrição detalhada deve ter no mínimo 50 caracteres")]
-        [MaxLength(400, ErrorMessage = "Descrição detalhada deve ter no máximo 400 caracteres")]
+        [MinLength(20, ErrorMessage = "Descrição detalhada deve ter no mínimo 20 caracteres")]
+        [MaxLength(200, ErrorMessage = "Descrição detalhada deve ter no máximo 200 caracteres")]
         public string DescricacaoDetalhada { get; set; }
         [Required(ErrorMessage = "Informe o preço do lanche")]
         [Display(Name = "Preço")]
         [Column(TypeName = "decimal(10,2)")]
         [Range(1, 999.99, ErrorMessage = "O preço deve está entre 1 e 999,99")]
         public decimal Preco { get; set; }
-        [Display(Name = "Caminho Imagem Normal")]
+        [Display(Name = "Caminho da Imagem Normal")]
         [StringLength(200)]
         public string ImagemUrl { get; set; }
-        [Display(Name = "Caminho Imagem Miniatura")]
+        [Display(Name = "Caminho da Imagem em Miniatura")]
         [StringLength(200)]
         public string ImagemThumbnailUrl { get; set; }
-        [Display(Name = "Preferido?")]
+        [Display(Name = "Preferido")]
         public bool IsLanchePreferido { get; set; }
         [Display(Name = "Estoque")]
         public bool EmEstoque { get; set; }
-
+        [Display(Name = "Categoria")]
         public int CategoriaId { get; set; }
         public virtual CategoriaModel Categoria { get; set; }
     }

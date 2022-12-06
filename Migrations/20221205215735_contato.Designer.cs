@@ -12,8 +12,8 @@ using VendaDeLanches.Context;
 namespace VendaDeLanches.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221203033213_segundamigration")]
-    partial class segundamigration
+    [Migration("20221205215735_contato")]
+    partial class contato
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -268,6 +268,25 @@ namespace VendaDeLanches.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categorias");
+                });
+
+            modelBuilder.Entity("VendaDeLanches.Models.ContatoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("EmailParaContato")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mensagem")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Mensagens");
                 });
 
             modelBuilder.Entity("VendaDeLanches.Models.LancheModel", b =>

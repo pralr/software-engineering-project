@@ -1,0 +1,44 @@
+﻿@model IEnumerable<VendaDeLanches.Models.ContatoModel>
+
+@{
+    ViewData["Title"] = "Mensagens dos Clientes";
+}
+
+<h1>Mensagens dos clientes
+</h1>
+<br/><br/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataEnvioDaMensagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailParaContato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mensagem)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataEnvioDaMensagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailParaContato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mensagem)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

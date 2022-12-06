@@ -15,7 +15,7 @@ namespace VendaDeLanches.Models
         public string Nome { get; set; }
         [StringLength(300, ErrorMessage = "O tamanho máximo permitido é 300 caracteres.")]
         [Required(ErrorMessage = "Informe a descrição da categoria.")]
-        [Display(Name = "Nome")]
+        [Display(Name = "Descrição")]
         public string Descricao { get; set; }
 
         public List<LancheModel> Lanches { get; set; }

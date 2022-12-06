@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ReflectionIT.Mvc.Paging;
-using VendaDeLanches.Areas.Admin.Services;
 using VendaDeLanches.Context;
 using VendaDeLanches.Models;
 using VendaDeLanches.Repositories;
@@ -29,11 +28,11 @@ builder.Services.AddPaging(options =>
 
 builder.Services.AddTransient<ILancheRepository, LancheRepository>();
 builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+builder.Services.AddTransient<IContatoRepository, ContatoRepository>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 builder.Services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
-builder.Services.AddScoped<RelatorioVendasService>(); 
 // to registrando como serviço uma classe (geralmente nao se faz)
 // posso usar o serviço do relatorio e injeta-lo no construtor do controlador 
 

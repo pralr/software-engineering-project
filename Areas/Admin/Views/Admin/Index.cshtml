@@ -3,8 +3,31 @@
 <div class="container">
     <div class="jumbotron">
         <p>
-            <h2>Essa é a área do Administrador</h2>
+            <div style="text-align:center;">
+                <h2 style="color:white">Essa é a área do Administrador</h2>
+                <br />
+            </div>
+            
+
+            <div class="alert alert-secondary" role="alert">
+                <p class="mb-0" style="color:black">
+                    ATENÇÃO!  <br /> <br />Somente administradores (ou autorizados pelos administradores) podem acessar esta área.
+                   Aqui, você pode criar, alterar, ver detalhes ou excluir lanches, categorias e pedidos. Além disso,
+                   terá acesso as mensagens enviadas pelos clientes no site.
+                    <br /> <br />Atenciosamente,
+                   Gerente.
+                </p>
+            </div>
+           
         </p>
     </div>
-    <a asp-area="" asp-controller="Home" asp-action="Index">Voltar a Home Page</a>
+    <br/>
+
+    <div style="text-align:center;">
+        <button type="button" class="btn btn-secondary">
+            <a asp-area="" asp-controller="Home" asp-action="Index" style="color:white; text-decoration:none;">Voltar a tela principal</a>
+        </button>
+    </div>
+   
 </div>
+<br/><br/>

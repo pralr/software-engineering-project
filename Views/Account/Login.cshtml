@@ -1,18 +1,48 @@
 ﻿@model LoginViewModel
 
-<body id="body-login">
-    <div id="welcome" class="fadeIn">
-        <img src="~/images/burguer.png" alt="">
-    </div>
 
-    <div id="login" class="fadeIn">
-        <img src="~/images/user.png" alt="">
-        <form asp-controller="Account" asp-action="Login" method="post">
-            <div><input asp-for="UserName" type="text" placeholder="Digite seu login" id="email"></div>
-            <div><input asp-for="Password" type="password" placeholder="Digite sua senha" id="senha"></div>
-            <div><input type="submit" id="submit" value="Entrar"></div>
-        </form>
-    </div>
+@{
+    ViewData["Title"] = "Login";
 
-    <img id="logo-footer" class="fadeIn" src="~/images/logo-black.png" alt="">
-</body>
+}
+<br/><br/>
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-dismissible alert-danger">
+         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<br/><br /><br/>
+<<table class="table">
+    <tr>
+        <td>
+            <div class="row">
+                <div class="col-10 col-md-10 col-lg-10">
+
+                    <div id="welcome" class="fadeIn">
+                        <img src="~/images/burguer.png" alt="">
+                    </div>
+
+                    <div id="login" class="fadeIn">
+                        <img src="~/images/user.png" alt="">
+                        <form asp-controller="Account" asp-action="Login" method="post">
+
+                            <!-- <div asp-validation-summary="All" class="text-danger"></div> -->
+                            
+                            <input type="hidden" asp-for="ReturnUrl" />
+
+                            <div><input asp-for="UserName" type="text" placeholder="Digite seu login" id="email"></div>
+                            <div><input asp-for="Password" type="password" placeholder="Digite sua senha" id="senha"></div>
+                            <div><input type="submit" id="submit" value="Entrar"></div>
+                            <div><a asp-controller="Account" asp-action="Register">Não tem uma conta?</a></div>
+                        </form>
+                    </div>
+
+                    <img id="logo-footer" class="fadeIn" src="~/images/logo-black.png" alt="">
+                       
+                </div>
+            </div>
+        </td>
+</table>

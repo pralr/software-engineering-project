@@ -30,6 +30,7 @@ namespace VendaDeLanches.Controllers
         {
             if (!ModelState.IsValid)
             {
+                TempData["MensagemErro"] = $"Por favor, preencha todos os campos.";
                 return View(loginVM);
             }
 
@@ -53,8 +54,8 @@ namespace VendaDeLanches.Controllers
                 }
 
             }
-
-            ModelState.AddModelError("", "Falha ao realizar o login!");
+            TempData["MensagemErro"] = "Usuário e/ou senha inválido(s). Por favor, tente novamente.";
+            //ModelState.AddModelError("", "Falha ao realizar o login!");
             return View(loginVM);
 
         }
@@ -71,20 +72,27 @@ namespace VendaDeLanches.Controllers
             if(ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = registroVM.UserName };
-                var result = await _userManager.CreateAsync(user, registroVM.Password);
+                var result = await _userManager.CreateAsync(user, registroVM.Password); 
 
                 if(result.Succeeded)
                 {
                     // await _signInManager.SignInAsync(user, isPersistent: false);
-
+                    TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso!";
                     await _userManager.AddToRoleAsync(user, "Member"); // todo usuario registrado vai pro perfil member
                     return RedirectToAction("Login", "Account");
                 } else
                 {
-                    this.ModelState.AddModelError("Registro", "Falha ao registrar o usuarío.");
+                    // motivos pelo qual nao funcionou 
+                    // um dos campos nao foi preenchido 
+                    // o usuario ja existe
+                    // a senha nao segue os padroes 
+
+                    TempData["MensagemErro"] = "Este nome de usuário já é utilizado. Por favor, escolha outro!";
+                  //  this.ModelState.AddModelError("Registro", "Login já é utilizado, por favor, utilize outro.");
                 }
 
-            }
+
+            } 
             return View(registroVM);
         }
 
