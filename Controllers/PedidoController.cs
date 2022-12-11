@@ -75,7 +75,7 @@ namespace VendaDeLanches.Controllers
             // define mensagens ao cliente
             // como to num controlador, toda vez que eu quiser passar dados entre controler e view ou vice-versa
             // uso ou view bag ou view data
-                  ViewBag.CheckoutCompletoMensagem = "Obrigada por comprar conosco"!;
+                  ViewBag.CheckoutCompletoMensagem = "Obrigada por comprar conosco";
                   ViewBag.TotalPedido = _carrinhoCompra.GetCarrinhoCompraTotal();
 
                 // limpa carrinho do cliente

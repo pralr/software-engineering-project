@@ -315,3 +315,7 @@ input#submit:hover {
 #nome-lanche:hover {
     color: black !important;
 }
+
+.onlyColor {
+    color:white !important;
+}
